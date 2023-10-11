@@ -1,0 +1,27 @@
+<textarea rows="40" cols="100">
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obliczanie ilości sekund</title>
+    <script>
+            
+            var D1_sub = parseInt(prompt("Podaj pierwszy numer dnia:"));
+            var G1_sub = parseInt(prompt("Podaj pierwszą godzinę:"));
+            var D2_sub = parseInt(prompt("Podaj drugi numer dnia:"));
+            var G2_sub = parseInt(prompt("Podaj drugą godzinę:"));
+
+            
+            var dniRoznica = D1_sub - D2_sub;
+            var godzinyRoznica = G1_sub - G2_sub;
+            var iloscSekund = (dniRoznica * 24 * 60 * 60) + (godzinyRoznica * 60 * 60);
+
+            
+            document.write("<h1 style='color: green; font-size: 55px;'>Ilość sekund między dniami i godzinami: " + iloscSekund + "</h1>");
+    
+    </script>
+</head>
+<body>
+</body>
+</html>
+</textarea>
