@@ -1,0 +1,34 @@
+<textarea rows="40" cols="100">
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function pole_subiel()
+{
+var a_sub= parseFloat(document.getElementById('dlugosc').value);
+var b_sub= parseFloat(document.getElementById('wysokosc').value);
+var p= a_sub*b_sub;
+alert("pole="+p.toFixed(2)+" cm^2"); 
+document.getElementById("nazwa").innerHTML ="Pole prostokata= "+p.toFixed(2)+" cm^2";
+}
+function obwod_subiel()
+{
+var a_sub= parseFloat(document.getElementById('dlugosc').value);
+var b_sub= parseFloat(document.getElementById('wysokosc').value);
+var obw=2*b_sub+2*a_sub;
+alert("obwod="+obw.toFixed(2)+" cm^2"); 
+document.getElementById("nazwa").innerHTML ="Obwód prostokata= "+obw.toFixed(2)+" cm";
+}
+</script>
+<h1>Wszystko o PROSTOKACIE</h1><br><br>
+Podaj długość boku: <input type="text" id="dlugosc" value=""> cm<br><br><br>
+Podaj wysokosc boku: <input type="text" id="wysokosc" value=""> cm<br><br><br>
+<input type="button" name="pole" value="Oblicz pole" Onclick="pole_subiel()"><br><br>
+<input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_subiel()"><br><br>
+<div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>
+</textarea>

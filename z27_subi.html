@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body {
+    background-color: #f0f0f0;
+    color: blue;
+  }
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+function obliczWysokosc(odl_sub, kat_sub, s_sub) {
+    var radiany = kat_sub * (Math.PI / 180);
+    var h_sub = (s_sub * Math.tan(radiany)) / (1 - (s_sub / odl_sub));
+    
+    return h_sub.toFixed(2);
+}
+
+function obliczKatStartu(odl_sub, kat_sub, s_sub) {
+    var radiany = kat_sub * (Math.PI / 180);
+    var h_sub = obliczWysokosc(odl_sub, kat_sub, s_sub);
+    var kat_startu = Math.atan(h_sub / s_sub) * (180 / Math.PI);
+    
+    return kat_startu.toFixed(2);
+}
+
+function oblicz() {
+    var odl_sub = parseFloat(document.getElementById('odl_sub').value);
+    var kat_sub = parseFloat(document.getElementById('kat_sub').value);
+    var s_sub = parseFloat(document.getElementById('s_sub').value);
+
+    var wysokosc = obliczWysokosc(odl_sub, kat_sub, s_sub);
+    var kat_startu = obliczKatStartu(odl_sub, kat_sub, s_sub);
+
+    document.write("Wysokość (h_sub): " + wysokosc + " [jednostka]<br>");
+    document.write("Kąt startu samolotu: " + kat_startu + " stopni<br>");
+}
+
+</script>
+
+<form>
+  Odległość między Arturem i Dawidem: <input type="text" id="odl_sub"><br>
+  Kąt startu samolotu: <input type="text" id="kat_sub"><br>
+  Długość przebytej drogi przez samolot nad Dawidem: <input type="text" id="s_sub"><br>
+  <input type="button" value="Oblicz" onclick="oblicz()">
+</form>
+
+</body>
+</html>

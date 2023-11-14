@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+function Pow_subiel(gorna_podstawa, dolna_podstawa, wysokosc) {
+
+    var ramie = Math.sqrt(wysokosc * wysokosc + Math.pow((Math.abs(gorna_podstawa - dolna_podstawa) / 2), 2));
+
+    var pole = ((gorna_podstawa + dolna_podstawa) / 2) * wysokosc;
+    
+    return pole.toFixed(2);
+}
+
+function Obw_subiel(gorna_podstawa, dolna_podstawa, wysokosc) {
+    var ramie = Math.sqrt(wysokosc * wysokosc + Math.pow((Math.abs(gorna_podstawa - dolna_podstawa) / 2), 2));
+    
+    var obwod = gorna_podstawa + dolna_podstawa + 2 * ramie;
+    
+    return obwod.toFixed(2);
+}
+
+function oblicz() {
+    var gorna_podstawa = parseFloat(document.getElementById('gorna_podstawa').value);
+    var dolna_podstawa = parseFloat(document.getElementById('dolna_podstawa').value);
+    var wysokosc = parseFloat(document.getElementById('wysokosc').value);
+
+    var pole = Pow_subiel(gorna_podstawa, dolna_podstawa, wysokosc);
+    var obwod = Obw_subiel(gorna_podstawa, dolna_podstawa, wysokosc);
+
+    document.write("Pole trapezu: " + pole + "<br>");
+    document.write("Obwód trapezu: " + obwod + "<br>");
+}
+
+</script>
+
+<form>
+  Górna podstawa: <input type="text" id="gorna_podstawa"><br>
+  Dolna podstawa: <input type="text" id="dolna_podstawa"><br>
+  Wysokość: <input type="text" id="wysokosc"><br>
+  <input type="button" value="Oblicz" onclick="oblicz()">
+</form>
+
+</body>
+</html>

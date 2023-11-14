@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body {
+    background-color: #f0f0f0; 
+    color: blue; 
+  }
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+var N0 = parseFloat(prompt("Podaj ilość początkową atomów pierwiastka rozpadu (N0):"));
+var t = parseFloat(prompt("Podaj czas (t) w latach:"));
+var T_half = parseFloat(prompt("Podaj okres połowicznego zaniku (T1/2) w latach:"));
+
+
+var lambda = Math.LN2 / T_half;
+
+
+var N = N0 * Math.exp(-lambda * t);
+
+
+document.write("N0 = " + N0.toFixed(2) + " [sztuk]<br>");
+document.write("t = " + t.toFixed(2) + " [lat]<br>");
+document.write("T1/2 = " + T_half.toFixed(2) + " [lat]<br>");
+document.write("Lambda = " + lambda.toFixed(7) + " [1/rok]<br>");
+document.write("N = " + N.toFixed(7) + " [sztuk]<br>");
+
+
+document.write("Autor: Dominik  Subiel<br>");
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function pole_subiel()
+{
+var a_sub= parseFloat(document.getElementById('dlugosc').value);
+var b_sub= a_sub*a_sub;
+document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b_sub.toFixed(2)+" cm^2";
+}
+function obwod_subiel()
+{
+var a_sub= parseFloat(document.getElementById('dlugosc').value);
+var b_sub= 4*a_sub;
+document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b_sub.toFixed(2)+" cm";
+}
+</script>
+<h1>Wszystko o KWADRACIE</h1><br><br>
+Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+<input type="button" name="pole" value="Oblicz pole" Onclick="pole_subiel()"><br><br>
+<input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_subiel()"><br><br>
+<div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>

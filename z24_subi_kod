@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body {
+    background-color: gray; 
+    color: blue;
+      font-size: 30px;
+  }
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+var x1_sub = parseFloat(prompt("Podaj wartość x1:"));
+var x2_sub = parseFloat(prompt("Podaj wartość x2:"));
+
+
+document.write(" x1= " + x1_sub + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x2= " + x2_sub + "<br>");
+var x1_rad = (x1_sub * Math.PI) / 180; 
+document.write("x1= " + x1_sub + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x1= " + x1_rad.toFixed(2) + " <br>");
+var y1 = Math.pow(x1_sub, 7/9) * 3;
+document.write("y1 = " + y1.toFixed(2) + "<br>");
+
+
+
+var y2 = 2 * Math.cos(x1_rad) + 3 * Math.sin(x1_rad);
+document.write("y2 = " + y2.toFixed(2) + "<br>");
+
+
+
+
+
+var y3 = Math.cbrt(Math.pow(x1_sub, 5) + 2 * Math.pow(2 * x1_sub, 4) * Math.abs(x1_sub - x2_sub));
+document.write("y3 = " + y3.toFixed(2) + "<br>");
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function drabina_subiel()
+{
+    var d_sub = parseFloat(document.getElementById('wysokosc').value);
+    var x_sub = parseFloat(document.getElementById('dlugosc').value);
+    var drab = Math.sqrt(d_sub * d_sub + x_sub * x_sub);
+    alert("drabina=" + drab.toFixed(2) + "m"); 
+    document.getElementById("nazwa").innerHTML = "Drabina=" + drab.toFixed(2) + "m";
+}
+
+function alfa_subiel()
+{
+    var d_sub = parseFloat(document.getElementById('wysokosc').value);
+    var x_sub = parseFloat(document.getElementById('dlugosc').value);
+    var alfa = Math.atan(d_sub / x_sub) * (180 / Math.PI);
+    alert("kąt alfa=" + alfa.toFixed(2) + " stopni"); 
+    document.getElementById("nazwa").innerHTML = "kąt alfa=" + alfa.toFixed(2) + " stopni";
+}
+</script>
+
+<h1>Drabina</h1><br><br>
+Podaj d: <input type="text" id="wysokosc" value=""> cm<br><br><br>
+Podaj x: <input type="text" id="dlugosc" value=""> cm<br><br><br>
+<input type="button" name="drabina" value="Oblicz drabinę" onclick="drabina_subiel()"><br><br>
+<input type="button" name="alfa" value="Oblicz kąt alfa" onclick="alfa_subiel()"><br><br>
+<div style="color:red; font-size:50px;" id="nazwa"></div>
+</body>
+</html>
