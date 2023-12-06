@@ -1,0 +1,27 @@
+<html>
+ <head>
+ <script type="text/javascript">
+ function monitor(firma,matryca,wielkosc)
+{
+this.firma=firma;
+this.matryca=matryca;
+this.wielkosc=wielkosc;
+}
+ monitor.prototype.wypisz = function () 
+ {
+ alert(this.firma + ' ' + this.matryca+ ' ' + this.wielkosc);
+ };
+var monitor1 = new monitor("MSI", "VA", "30 cali");
+var monitor2 = new monitor('Asus', 'IPS', '21 cali');
+monitor1.wypisz(); 
+monitor2.wypisz();
+ document.write("dostęp do właściwości"+"<br>");
+
+ document.write("monitor pierwszy"+" "+monitor1.firma+" "+monitor1.matryca+" "+monitor1.wielkosc);
+ </script>
+ </head>
+<body>
+<br>
+monitory
+</body>
+</html>

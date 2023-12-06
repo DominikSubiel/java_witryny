@@ -1,0 +1,20 @@
+<html>
+<head>
+  <script type="text/javascript">
+    var monitor = {
+      firma: 'MSI',
+      wielkosc: '30 cali',
+      matryca: 'va',
+      pokaz: function () {
+        document.write(this.firma + ' ' + this.wielkosc);
+      }
+    }
+
+    monitor.pokaz();
+  </script>
+</head>
+<body>
+  <br>
+  monitor
+</body>
+</html>

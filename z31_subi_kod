@@ -1,0 +1,25 @@
+<html>
+<head>
+  <script type="text/javascript">
+    var monitor = {
+      firma: 'MSI',
+      wielkosc: '30 cali',
+      matryca: 'va',
+      pokaz: function () 
+        {
+        document.write(this.firma + ' ' + this.matryca);
+      }
+    }
+
+    monitor.pokaz();
+      monitor.rprodukcji=2022;
+monitor.wypisz=function() {alert('Rok produkcji ' + this.rprodukcji + ' rok')}
+monitor.wypisz();
+
+  </script>
+</head>
+<body>
+  <br>
+  monitor
+</body>
+</html>
